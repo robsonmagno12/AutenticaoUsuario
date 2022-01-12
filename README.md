@@ -4,3 +4,4 @@
 #Utilizando Entity para cadastro de usuario e senha e salvando no BD MySQL e vrificando autenticação.<Br>
 #SingInManager utilizando Identity para logar 
 # AutenticaoUsuario
+# AutenticaoUsuario
