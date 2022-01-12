@@ -33,9 +33,17 @@ namespace UsuariosApi
             //configuração para utilizar direto Add-Migration criando tabela automatica.
        
             services.AddDbContext<UserDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("UsuarioConnection")));
-            services.AddIdentity<IdentityUser<int>, IdentityRole<int>>()
+            services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(
+                 //obrigado por email requisicao para logar
+                 opt => opt.SignIn.RequireConfirmedEmail = true
+
+                )
                 .AddEntityFrameworkStores<UserDbContext>();
+            //declaração e injeção deles mesmo
             services.AddScoped<CadastroService, CadastroService>();
+            services.AddScoped<logoutService, logoutService>();
+            services.AddScoped<LoginService, LoginService>();
+            services.AddScoped<TokenService, TokenService>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
           /*  services.Configure<IdentityOptions>(options =>
