@@ -1,27 +1,19 @@
 ﻿{
-  "$schema": "http://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:35142",
-      "sslPort": 44352
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
     }
   },
-  "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "UsuariosApi": {
-      "commandName": "Project",
-      "dotnetRunMessages": "true",
-      "applicationUrl": "https://localhost:6001;http://localhost:6000",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    }
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "UsuarioConnection": "server=localhost;database=usuariodb;user=root;password=1234"
+  },
+  "EmailSettings": {
+    "From": "aluratreino255@gmail.com",
+    "SmtpServer": "smtp.gmail.com",
+    "Port": "465",
+    "Password": "Treinoemail25!"
   }
 }

@@ -38,7 +38,8 @@ namespace UsuariosApi
                  opt => opt.SignIn.RequireConfirmedEmail = true
 
                 )
-                .AddEntityFrameworkStores<UserDbContext>();
+                .AddEntityFrameworkStores<UserDbContext>()
+                .AddDefaultTokenProviders();
             //declaração e injeção deles mesmo
             services.AddScoped<CadastroService, CadastroService>();
             services.AddScoped<logoutService, logoutService>();
